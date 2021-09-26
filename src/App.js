@@ -23,6 +23,7 @@ import {
 function App() {
   return (
     <div>
+<DangKy/>
 
     </div>
   );
