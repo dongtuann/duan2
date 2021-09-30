@@ -1,13 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@mui/material/TextField';
-
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 function Addsp() {
     return (
       <div>
@@ -17,7 +10,7 @@ function Addsp() {
               <div class="offset-3 col-7 row-8 mt- mt-5 ">
                 <form >
                   <div class="card">
-                    <div class="card-header" style={{ margin: "auto", color: "red" }}>
+                    <div class="card-header" style={{ margin: "auto", color: "red" ,fontSize:"25px"}}>
                       <b>Thêm sản phẩm</b>
                     </div>
                     <div class="card-body">

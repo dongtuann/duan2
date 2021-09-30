@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Login from './Login';
-import Grid from '@mui/material/Grid';
+
 import {
   BrowserRouter,
   Switch,
@@ -35,7 +35,7 @@ function DangKy() {
               <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
 
               </Avatar>
-              <Typography component="h1" variant="h5">
+              <Typography component="h1" variant="h5" color="red">
                 Đăng kí tài khoản
               </Typography>
               <Box component="form" noValidate sx={{ mt: 1 }}>
@@ -102,25 +102,28 @@ function DangKy() {
                   Đăng Ký
                 </Button>
 
-                <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-               Quay lại
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link to="/Login" variant="body2">
-                {"Đăng Nhập"}
-              </Link>
-            </Grid>
-          </Grid>
-               
-           
-              <Switch>
-                <Route path="/Login"><Login /></Route>
+                   <Link to ="#" underline="hover" 
+                    fullWidth
+                    class="btn btn-success" style={{ width: "180px" , marginRight:"20px" }} 
+                    sx={{ mt: 2, mb: 2 }}>
+                      {' Quay lại'}
+                    </Link>
+
+                   
+              
+                  <Link to ="/a/Login" underline="hover" fullWidth
+                      class="btn btn-danger" style={{ width: "189px" }}
+                      sx={{ mt: 2, mb: 2 }}>
+                        {' Đăng Nhập'}
+                      </Link>
+
+                   
+             
+                <Switch >
+                  <Route path="/a/Login"><Login /></Route>
+                </Switch>
 
 
-              </Switch>
               </Box>
             </Box>
           </Container>
