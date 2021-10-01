@@ -35,7 +35,6 @@ import Paper from '@mui/material/Paper';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
-import UpdateCategory from "./duan/QLDanhMuc/UpdateCategory";
 
 
 
@@ -110,7 +109,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
   }),
 );
-function App() {
+function DaHuy() {
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -232,11 +231,11 @@ function App() {
           <div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
 
           >Đơn đã xác nhận</Button></div>
-          <div style={{ marginLeft: "410px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
+          <div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
 
           >Đơn hàng đã hủy</Button></div>
-
-
+     
+          
           <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
           </div>
           <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
@@ -246,7 +245,7 @@ function App() {
                 <div class="card">
 
                   <div class="card-header" >
-                    <b>Tât cả đơn hàng</b>
+                    <b>Đơn đã hủy</b>
                   </div>
                   <div class="card-body">
 
@@ -267,7 +266,7 @@ function App() {
                                 <TableCell align="right">Trạng Thái</TableCell>
                                 <TableCell align="right">Tổng(vnd)&nbsp;</TableCell>
                                 <TableCell align="right">Hành động&nbsp;</TableCell>
-
+                           
                               </TableRow>
                             </TableHead>
                             <TableBody>
@@ -280,73 +279,13 @@ function App() {
 
                                 <TableCell align="right">17/10/2021</TableCell>
                                 <TableCell align="right">Đã hủy</TableCell>
-                                <TableCell align="right">400.000</TableCell>
+                                <TableCell align="right">400.000.000</TableCell>
 
+                              
 
-
-
+                                 
                                 <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger"
-                                    style={{ marginLeft: "50%" }}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">1</TableCell>
-                                <TableCell align="right">xxxxxxxxasascv</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Đã hủy</TableCell>
-                                <TableCell align="right">400.000</TableCell>
-
-
-
-
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger"
-                                    style={{ marginLeft: "50%" }}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">1</TableCell>
-                                <TableCell align="right">xxxxxxxxasascv</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Chưa thanh toán</TableCell>
-                                <TableCell align="right">200.000</TableCell>
-
-
-
-
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger"
-                                    style={{ marginLeft: "50%" }}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">1</TableCell>
-                                <TableCell align="right">bfsbbv</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Đã hủy</TableCell>
-                                <TableCell align="right">7.000</TableCell>
-
-
-
-
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger"
+                                  <Button variant="outlined" class="btn btn-outline-danger" 
                                     style={{ marginLeft: "50%" }}
                                   > Xem chi tiết
                                   </Button>
@@ -364,7 +303,7 @@ function App() {
 
 
                 <div class="card-footer text-muted">
-                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
+                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '10%' }}>
                     <li class="page-item">
                       <a class="page-link">Trang truoc</a>
                     </li>
@@ -384,4 +323,4 @@ function App() {
     </Box>
   );
 }
-export default App;
+export default DaHuy;
