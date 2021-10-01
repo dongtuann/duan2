@@ -110,7 +110,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
   }),
 );
-function Dangcho() {
+function KhachHang() {
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -141,14 +141,14 @@ function Dangcho() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Home
-
           </Typography>
+
           <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "1000px" }} /><Button variant="contained"
             class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
 
           ></Button>
-            <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
-          <img src="#" width="80px"/>
+          <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
+          <img src="..." width="80px"/>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -224,23 +224,7 @@ function Dangcho() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <main class="container"   >
-          <div class=" mt-4 offset-1 mb -4" style={{ marginLeft: "-20px" }}>   <Button variant="contained" class="btn btn-outline-primary"
-
-          >Tất cả đơn hàng</Button>
-          </div>
-          <div style={{ marginLeft: "125px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-secondary"
-
-          >Đơn đang chờ</Button></div>
-          <div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
-
-          >Đơn đã xác nhận</Button></div>
-          <div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
-
-          >Đơn hàng đã hủy</Button></div>
-     
-          
-          <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
-          </div>
+ 
           <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
 
             <div class="offset-1 mt-5  " >
@@ -248,7 +232,7 @@ function Dangcho() {
                 <div class="card">
 
                   <div class="card-header" >
-                    <b>Đơn đang chờ</b>
+                    <b>Danh sách khách hàng</b>
                   </div>
                   <div class="card-body">
 
@@ -264,13 +248,13 @@ function Dangcho() {
                             <TableHead>
                               <TableRow>
                                 <TableCell>ID</TableCell>
-                                <TableCell align="right">Khách Hàng</TableCell>
-                                <TableCell align="right">Ngày Đặt&nbsp;</TableCell>
-                                <TableCell align="right">Trạng Thái</TableCell>
-                                <TableCell align="right">Tổng(vnd)&nbsp;</TableCell>
+                                <TableCell align="right">Họ Tên</TableCell>
+                                
+                                <TableCell align="right">Email</TableCell>
+                                <TableCell align="right">Số điện thoại&nbsp;</TableCell>
+                                <TableCell align="right">Địa chỉ &nbsp;</TableCell>
                                 <TableCell align="right">Hành động&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
+
                               </TableRow>
                             </TableHead>
                             <TableBody>
@@ -279,31 +263,43 @@ function Dangcho() {
 
                               >
                                 <TableCell align="right">1</TableCell>
-                                <TableCell align="right">tuandv</TableCell>
+                                <TableCell align="right">abccc</TableCell>
 
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Chưa thanh toán</TableCell>
-                                <TableCell align="right">400.000</TableCell>
+                                <TableCell align="right">abc@gamil.com</TableCell>
+                                <TableCell align="right">01999888</TableCell>
+                                <TableCell align="right">Dan P</TableCell>
+
+
+
 
                                 <TableCell style={{ marginLeft: "70%" }}>
-
-                                  <Button variant="contained" class="btn btn-outline-primary" 
-                                    style={{ marginLeft: "30%" }}
-                                  >Xác nhận</Button>
-                                </TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger" 
+                                  <Button variant="outlined" class="btn btn-outline-danger"
                                     style={{ marginLeft: "50%" }}
-                                  > Hủy
-                                  </Button>
-                                </TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }}
-                                  > Xem chi tiết
+                                  > Delete
                                   </Button>
                                 </TableCell>
                               </TableRow>
+                              <TableRow
+
+                              >
+                                <TableCell align="right">2</TableCell>
+                                <TableCell align="right">bbbbscv</TableCell>
+
+                                <TableCell align="right">e@gmail.com</TableCell>
+                                <TableCell align="right">124124124214</TableCell>
+                                <TableCell align="right">aaaaa</TableCell>
+
+
+
+
+                                <TableCell style={{ marginLeft: "70%" }}>
+                                  <Button variant="outlined" class="btn btn-outline-danger"
+                                    style={{ marginLeft: "50%" }}
+                                  > Delete
+                                  </Button>
+                                </TableCell>
+                              </TableRow>
+                            
 
                             </TableBody>
                           </Table>
@@ -316,7 +312,7 @@ function Dangcho() {
 
 
                 <div class="card-footer text-muted">
-                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '10%' }}>
+                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
                     <li class="page-item">
                       <a class="page-link">Trang truoc</a>
                     </li>
@@ -336,4 +332,4 @@ function Dangcho() {
     </Box>
   );
 }
-export default Dangcho;
+export default KhachHang;

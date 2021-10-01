@@ -136,6 +136,8 @@ function Addsp() {
                                 class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
 
                             ></Button>
+                              <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
+          <img src="#" width="80px"/>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

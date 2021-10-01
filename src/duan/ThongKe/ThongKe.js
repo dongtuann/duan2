@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from '@mui/material/Avatar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -18,33 +17,21 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import Button from '@mui/material/Button';
 import TableCell from '@mui/material/TableCell';
-import CreateSharpIcon from '@mui/icons-material/CreateSharp';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import ControlPointIcon from '@mui/icons-material/ControlPoint';
+
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 
-
-
-
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -110,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
   }),
 );
-function Dangcho() {
+function ThongKe() {
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -141,14 +128,13 @@ function Dangcho() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Home
-
           </Typography>
+
           <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "1000px" }} /><Button variant="contained"
             class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
 
           ></Button>
-            <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
-          <img src="#" width="80px"/>
+          <p style={{marginTop:"30px", marginLeft:"10px"}}>ABC</p>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -223,88 +209,87 @@ function Dangcho() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <main class="container"   >
-          <div class=" mt-4 offset-1 mb -4" style={{ marginLeft: "-20px" }}>   <Button variant="contained" class="btn btn-outline-primary"
-
-          >Tất cả đơn hàng</Button>
-          </div>
-          <div style={{ marginLeft: "125px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-secondary"
-
-          >Đơn đang chờ</Button></div>
-          <div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
-
-          >Đơn đã xác nhận</Button></div>
-          <div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
-
-          >Đơn hàng đã hủy</Button></div>
-     
-          
+        <main class="container"   >     
           <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
           </div>
           <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
 
             <div class="offset-1 mt-5  " >
               <form >
+            
                 <div class="card">
 
                   <div class="card-header" >
-                    <b>Đơn đang chờ</b>
+                    
+                    <h2 style={{color:"red"}}>Danh Sách Thống Kê </h2>
                   </div>
                   <div class="card-body">
 
-                    <div class="row">
-
+                    <div class="row">                      
                       <div class="col">
-                        <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "850px" }} /><Button variant="contained"
-                          class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
+                      <div class="form-group  "style={{marginTop:"20px"}}>
+                      <div style={{marginLeft:"767px"}}>
+                      <input type="date" class="form-control" style={{width:"180px"}} id="ngaybatdau" name="ngaybatdau" autocomplete="off"/>
+                 
+             
+                 <p style={{marginLeft:"200px", marginTop:"-32px"}}>đến</p>
+                
+                     <input type="date" class="form-control"  style={{width:"180px", marginLeft:"250px", marginTop:"-46px"}}id="ngayketthuc" name="ngayketthuc" autocomplete="off"/>  
+           </div>
+              </div>
+                       <Button variant="contained"
+                          class="btn btn-outline-warning" style={{ marginTop: "10px" , marginTop:"-66px", marginLeft:"1200px"}} startIcon={<SearchIcon />}
 
                         ></Button>
-                        <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                        <TableContainer component={Paper} style={{ marginTop: "10px" }}>
                           <Table sx={{ minWidth: 250 }} aria-label="simple table">
                             <TableHead>
                               <TableRow>
-                                <TableCell>ID</TableCell>
-                                <TableCell align="right">Khách Hàng</TableCell>
-                                <TableCell align="right">Ngày Đặt&nbsp;</TableCell>
-                                <TableCell align="right">Trạng Thái</TableCell>
-                                <TableCell align="right">Tổng(vnd)&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
+                                <TableCell align="right">ID</TableCell>
+                                <TableCell align="right">Họ Tên</TableCell>
+                                <TableCell align="right">Địa chỉ&nbsp;</TableCell>
+                                <TableCell align="right">Tổng(vnd)</TableCell>
+                                <TableCell align="right">Ngày&nbsp;</TableCell>
+                           
                               </TableRow>
                             </TableHead>
                             <TableBody>
-
+                            <TableRow
+                              >
+                                <TableCell align="right">5</TableCell>
+                                <TableCell align="right">tuandv</TableCell>
+                                <TableCell align="right">Tan Hoi</TableCell>
+                                <TableCell align="right">1.000</TableCell>
+                                <TableCell align="right">19/9/2021</TableCell>
+                                <TableCell style={{ marginLeft: "70%" }}>
+                                
+                                </TableCell>
+                              </TableRow>
                               <TableRow
 
                               >
-                                <TableCell align="right">1</TableCell>
-                                <TableCell align="right">tuandv</TableCell>
+                                <TableCell align="right">44</TableCell>
+                                <TableCell align="right">bbbbDAF</TableCell>
 
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Chưa thanh toán</TableCell>
+                                <TableCell align="right">dAN</TableCell>
                                 <TableCell align="right">400.000</TableCell>
-
+                                <TableCell align="right">7/10/2021</TableCell>
                                 <TableCell style={{ marginLeft: "70%" }}>
-
-                                  <Button variant="contained" class="btn btn-outline-primary" 
-                                    style={{ marginLeft: "30%" }}
-                                  >Xác nhận</Button>
-                                </TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger" 
-                                    style={{ marginLeft: "50%" }}
-                                  > Hủy
-                                  </Button>
-                                </TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }}
-                                  > Xem chi tiết
-                                  </Button>
+                                
                                 </TableCell>
                               </TableRow>
-
+                              <TableRow
+                              >
+                                <TableCell align="right">77</TableCell>
+                                <TableCell align="right">tuandv</TableCell>
+                                <TableCell align="right">Tan Hoi</TableCell>
+                                <TableCell align="right">1.000</TableCell>
+                                <TableCell align="right">19/9/2021</TableCell>
+                                <TableCell style={{ marginLeft: "70%" }}>
+                                
+                                </TableCell>
+                              </TableRow>
+                            
                             </TableBody>
                           </Table>
                         </TableContainer>
@@ -316,7 +301,7 @@ function Dangcho() {
 
 
                 <div class="card-footer text-muted">
-                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '10%' }}>
+                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
                     <li class="page-item">
                       <a class="page-link">Trang truoc</a>
                     </li>
@@ -336,4 +321,4 @@ function Dangcho() {
     </Box>
   );
 }
-export default Dangcho;
+export default ThongKe;

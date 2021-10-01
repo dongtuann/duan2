@@ -35,10 +35,6 @@ import Paper from '@mui/material/Paper';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
-
-
-
-
 import {
   BrowserRouter,
   Switch,
@@ -110,7 +106,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
   }),
 );
-function Dangcho() {
+function All() {
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -141,14 +137,13 @@ function Dangcho() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Home
-
           </Typography>
+
           <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "1000px" }} /><Button variant="contained"
             class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
 
           ></Button>
-            <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
-          <img src="#" width="80px"/>
+          <p style={{marginTop:"30px", marginLeft:"10px"}}>ABC</p>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -224,23 +219,21 @@ function Dangcho() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <main class="container"   >
-          <div class=" mt-4 offset-1 mb -4" style={{ marginLeft: "-20px" }}>   <Button variant="contained" class="btn btn-outline-primary"
+        <div class=" mt-4 offset-1 mb -4" style={{ marginLeft: "-20px" }}>   <Button variant="contained" class="btn btn-outline-primary"
 
-          >Tất cả đơn hàng</Button>
-          </div>
-          <div style={{ marginLeft: "125px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-secondary"
+>Tất cả đơn hàng</Button>
+</div>
+<div style={{ marginLeft: "125px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-secondary"
 
-          >Đơn đang chờ</Button></div>
-          <div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
+>Đơn đang chờ</Button></div>
+<div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
 
-          >Đơn đã xác nhận</Button></div>
-          <div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
+>Đơn đã xác nhận</Button></div>
+<div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
 
-          >Đơn hàng đã hủy</Button></div>
-     
-          
-          <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
-          </div>
+>Đơn hàng đã hủy</Button></div>
+
+ 
           <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
 
             <div class="offset-1 mt-5  " >
@@ -248,7 +241,7 @@ function Dangcho() {
                 <div class="card">
 
                   <div class="card-header" >
-                    <b>Đơn đang chờ</b>
+                    <b>Tât cả đơn hàng</b>
                   </div>
                   <div class="card-body">
 
@@ -269,8 +262,7 @@ function Dangcho() {
                                 <TableCell align="right">Trạng Thái</TableCell>
                                 <TableCell align="right">Tổng(vnd)&nbsp;</TableCell>
                                 <TableCell align="right">Hành động&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
+
                               </TableRow>
                             </TableHead>
                             <TableBody>
@@ -279,27 +271,78 @@ function Dangcho() {
 
                               >
                                 <TableCell align="right">1</TableCell>
-                                <TableCell align="right">tuandv</TableCell>
+                                <TableCell align="right">xxxxxxxxasascv</TableCell>
+
+                                <TableCell align="right">17/10/2021</TableCell>
+                                <TableCell align="right">Đã hủy</TableCell>
+                                <TableCell align="right">400.000</TableCell>
+
+
+
+
+                                <TableCell style={{ marginLeft: "70%" }}>
+                                  <Button variant="outlined" class="btn btn-outline-danger"
+                                    style={{ marginLeft: "50%" }}
+                                  > Xem chi tiết
+                                  </Button>
+                                </TableCell>
+                              </TableRow>
+                              <TableRow
+
+                              >
+                                <TableCell align="right">1</TableCell>
+                                <TableCell align="right">xxxxxxxxasascv</TableCell>
+
+                                <TableCell align="right">17/10/2021</TableCell>
+                                <TableCell align="right">Đã hủy</TableCell>
+                                <TableCell align="right">400.000</TableCell>
+
+
+
+
+                                <TableCell style={{ marginLeft: "70%" }}>
+                                  <Button variant="outlined" class="btn btn-outline-danger"
+                                    style={{ marginLeft: "50%" }}
+                                  > Xem chi tiết
+                                  </Button>
+                                </TableCell>
+                              </TableRow>
+                              <TableRow
+
+                              >
+                                <TableCell align="right">1</TableCell>
+                                <TableCell align="right">xxxxxxxxasascv</TableCell>
 
                                 <TableCell align="right">17/10/2021</TableCell>
                                 <TableCell align="right">Chưa thanh toán</TableCell>
-                                <TableCell align="right">400.000</TableCell>
+                                <TableCell align="right">200.000</TableCell>
+
+
+
 
                                 <TableCell style={{ marginLeft: "70%" }}>
-
-                                  <Button variant="contained" class="btn btn-outline-primary" 
-                                    style={{ marginLeft: "30%" }}
-                                  >Xác nhận</Button>
-                                </TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger" 
+                                  <Button variant="outlined" class="btn btn-outline-danger"
                                     style={{ marginLeft: "50%" }}
-                                  > Hủy
+                                  > Xem chi tiết
                                   </Button>
                                 </TableCell>
+                              </TableRow>
+                              <TableRow
+
+                              >
+                                <TableCell align="right">1</TableCell>
+                                <TableCell align="right">bfsbbv</TableCell>
+
+                                <TableCell align="right">17/10/2021</TableCell>
+                                <TableCell align="right">Đã hủy</TableCell>
+                                <TableCell align="right">7.000</TableCell>
+
+
+
+
                                 <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }}
+                                  <Button variant="outlined" class="btn btn-outline-danger"
+                                    style={{ marginLeft: "50%" }}
                                   > Xem chi tiết
                                   </Button>
                                 </TableCell>
@@ -316,7 +359,7 @@ function Dangcho() {
 
 
                 <div class="card-footer text-muted">
-                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '10%' }}>
+                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
                     <li class="page-item">
                       <a class="page-link">Trang truoc</a>
                     </li>
@@ -336,4 +379,4 @@ function Dangcho() {
     </Box>
   );
 }
-export default Dangcho;
+export default All;
