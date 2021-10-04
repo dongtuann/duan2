@@ -35,6 +35,9 @@ import Paper from '@mui/material/Paper';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import CheckIcon from '@mui/icons-material/Check';
 import {
   BrowserRouter,
   Switch,
@@ -284,18 +287,20 @@ function XacNhan() {
                                 <TableCell style={{ marginLeft: "70%" }}>
 
                                   <Button variant="contained" class="btn btn-outline-primary" 
-                                    style={{ marginLeft: "30%" }}
-                                  >Xác nhận</Button>
+                                    style={{ marginLeft: "30%" }}startIcon={< CheckIcon/>}
+                                  >Xác nhận</Button>  
                                 </TableCell>
+                                
+                            
                                 <TableCell style={{ marginLeft: "70%" }}>
                                   <Button variant="outlined" class="btn btn-outline-danger" 
-                                    style={{ marginLeft: "50%" }}
+                                    style={{ marginLeft: "30%" }}  startIcon={< HighlightOffIcon  />}
                                   > Hủy
                                   </Button>
                                 </TableCell>
                                 <TableCell style={{ marginLeft: "70%" }}>
                                   <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }}
+                                    style={{ marginLeft: "30%" }} startIcon={<RemoveRedEyeIcon  />}
                                   > Xem chi tiết
                                   </Button>
                                 </TableCell>

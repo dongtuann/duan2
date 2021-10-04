@@ -36,7 +36,7 @@ import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 
-
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 import {
   BrowserRouter,
@@ -287,8 +287,8 @@ function DaHuy() {
 
                                  
                                 <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger" 
-                                    style={{ marginLeft: "50%" }}
+                                <Button variant="outlined" class="btn btn-outline-warning"
+                                    style={{ marginLeft: "35%" }} startIcon={<RemoveRedEyeIcon  />}
                                   > Xem chi tiết
                                   </Button>
                                 </TableCell>

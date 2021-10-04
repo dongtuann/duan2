@@ -35,9 +35,35 @@ import Paper from '@mui/material/Paper';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
-import UpdateCategory from "./duan/QLDanhMuc/UpdateCategory";
+
 
 import ThongKe from "./duan/ThongKe/ThongKe";
+
+import UpdateSP from "./duan/QLSanPham/UpdateSP";
+import Addsp from "./duan/QLSanPham/Addsp";
+import SanPham from "./duan/QLSanPham/SanPham";
+import UuDai from "./duan/QLUuDai/UuDai";
+import AddSale from "./duan/QLUuDai/AddSale";
+import UpdateSale from "./duan/QLUuDai/UpdateSale";
+
+import KhachHang from "./duan/QLTaiKhoan/KhachHang";
+
+import XacNhan from "./duan/QLDonHang/XacNhan";
+import Dangcho from "./duan/QLDonHang/Dangcho";
+import DaHuy from "./duan/QLDonHang/DaHuy";
+import All from "./duan/QLDonHang/All";
+
+import UpdateCategory from "./duan/QLDanhMuc/UpdateCategory";
+import DanhMuc from "./duan/QLDanhMuc/DanhMuc";
+import AddCategory from "./duan/QLDanhMuc/AddCategory";
+
+import DangKy from "./duan/a/DangKy";
+import Doimk from "./duan/a/Doimk";
+import Login from "./duan/a/Login";
+import Quenmk from "./duan/a/Quenmk";
+
+
+
 
 import {
   BrowserRouter,
@@ -46,11 +72,16 @@ import {
   Link
 } from "react-router-dom";
 
+
 function App() {
 
- 
+
   return (
-   <ThongKe/>
+<div>
+  
+</div>
+
+
   );
 }
 export default App;

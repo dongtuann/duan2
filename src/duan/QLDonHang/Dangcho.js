@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from '@mui/material/Avatar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -18,24 +17,22 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import Button from '@mui/material/Button';
 import TableCell from '@mui/material/TableCell';
-import CreateSharpIcon from '@mui/icons-material/CreateSharp';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
-
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import CheckIcon from '@mui/icons-material/Check';
 
 
 
@@ -147,8 +144,8 @@ function Dangcho() {
             class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
 
           ></Button>
-            <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
-          <img src="#" width="80px"/>
+          <p style={{ marginTop: "30px", marginLeft: "10px" }}>vipp2001</p>
+          <img src="#" width="80px" />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -234,11 +231,11 @@ function Dangcho() {
           <div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
 
           >Đơn đã xác nhận</Button></div>
-          <div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
+          <div style={{ marginLeft: "410px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
 
           >Đơn hàng đã hủy</Button></div>
-     
-          
+
+
           <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
           </div>
           <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
@@ -287,19 +284,21 @@ function Dangcho() {
 
                                 <TableCell style={{ marginLeft: "70%" }}>
 
-                                  <Button variant="contained" class="btn btn-outline-primary" 
-                                    style={{ marginLeft: "30%" }}
+                                  <Button variant="contained" class="btn btn-outline-primary"
+                                    style={{ marginLeft: "20%" }} startIcon={< CheckIcon />}
                                   >Xác nhận</Button>
                                 </TableCell>
+
+
                                 <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger" 
-                                    style={{ marginLeft: "50%" }}
+                                  <Button variant="outlined" class="btn btn-outline-danger"
+                                    style={{ marginLeft: "30%" }} startIcon={< HighlightOffIcon />}
                                   > Hủy
                                   </Button>
                                 </TableCell>
                                 <TableCell style={{ marginLeft: "70%" }}>
                                   <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }}
+                                    style={{ marginLeft: "20%" }} startIcon={<RemoveRedEyeIcon />}
                                   > Xem chi tiết
                                   </Button>
                                 </TableCell>

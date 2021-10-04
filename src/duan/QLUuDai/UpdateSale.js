@@ -18,29 +18,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import Button from '@mui/material/Button';
-import TableCell from '@mui/material/TableCell';
-import CreateSharpIcon from '@mui/icons-material/CreateSharp';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -108,7 +93,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-function App() {
+function UpdateSale() {
+
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -219,85 +205,51 @@ function App() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <main class="container"   >
-                <div class=" mt-4 offset-1 mb -4" style={{ marginLeft: "10px" }}>   <Button variant="contained" class="btn btn-outline-warning" startIcon={< ControlPointIcon />}
-
-                >Tạo danh mục</Button></div>
-                <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>            
-                </div>
-                <section class="row " style={{ marginLeft: "-120px" , width:"100%"}}>
-
-                    <div class="offset-1 mt-5  " >
-                        <form >
-                            <div class="card">
-                                <div class="card-header" >
-                                    <b>Danh sách sản phẩm</b>
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="row">
-
-                                        <div class="col">
-                                            <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "850px" }} /><Button variant="contained"
-                                                class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
-
-                                            ></Button>
-                                   <TableContainer component={Paper} style={{ marginTop: "20px" , width:"100%", marginLeft:"10px"}}>
-                        <Table style={{width:"1000px"}} aria-label="simple table">
-                          <TableHead>
-                            <TableRow>
-                              <TableCell>ID</TableCell>
-                              <TableCell align="right">Tên Danh Mục</TableCell>
-                              <TableCell align="right">Mô tả</TableCell>
-                              <TableCell align="right">Hành động</TableCell>
-                              <TableCell align="right">Hành động</TableCell>
-                            </TableRow>
-                          </TableHead>
-                          <TableBody>
-                            <TableRow >
-                              <TableCell align="right">1</TableCell>
-                              <TableCell align="right">Gạo nứt</TableCell>
-                              <TableCell align="right">Ngon</TableCell>
-                              <TableCell    style={{marginLeft:"70%"}}>
-                                <Button variant="contained" class="btn btn-outline-primary" startIcon={<CreateSharpIcon />}
-                               style={{marginLeft:"60%"}} >  Sửa</Button>
-                              </TableCell>
-                              <TableCell>
-                                <Button variant="outlined" class="btn btn-outline-danger" startIcon={<DeleteIcon />}   style={{marginLeft:"60%"}}>
-                                  Xóa
-                                </Button>
-                              </TableCell>
-                            </TableRow>
-
-                          </TableBody>
-                        </Table>
-                      </TableContainer>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="card-footer text-muted">
-                                <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '10%' }}>
-                                    <li class="page-item">
-                                        <a class="page-link">Trang truoc</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link">Trang sau</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
+      <body>
+      <main class="container">
+            <section class="row">
+              <div class="offset-3 col-7 row-8 mt- mt-5 ">
+                <form >
+                  <div class="card">
+                    <div class="card-header">
+                      <b>Sửa đổi ưu đãi </b>
                     </div>
-                </section>
-            </main>
+                    <div class="card-body">
+  
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea cols="85" rows="8"
+                              margin="normal"
+                              required
+                              fullWidth
+                              id="name"
+                            
+                              name="name"
+                             
+                            />
+                          </div>  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      <button class="btn btn-danger" style={{ marginRight: "20px", width:"100px" }}>Sửa</button>
+                      <button class="btn btn-success">Quay lại</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </main>
+  
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </body>
       </Box>
     </Box>
+
+
   );
 }
-export default App;
+export default UpdateSale;

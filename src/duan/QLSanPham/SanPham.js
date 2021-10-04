@@ -17,7 +17,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
@@ -34,12 +33,7 @@ import Paper from '@mui/material/Paper';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -281,11 +275,11 @@ function SanPham() {
 
                                                                 <Button variant="contained" class="btn btn-outline-primary" startIcon={<CreateSharpIcon />}
 
-                                                                >  Update</Button>
+                                                                >  Sửa</Button>
                                                             </TableCell>
                                                             <TableCell>
                                                                 <Button variant="outlined" class="btn btn-outline-danger" startIcon={<DeleteIcon />}>
-                                                                    Delete
+                                                                    Xóa
                                                                 </Button>
                                                             </TableCell>
                                                         </TableRow>
