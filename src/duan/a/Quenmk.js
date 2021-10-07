@@ -1,12 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@mui/material/TextField';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
 function Quenmk() {
   return (
     <div>

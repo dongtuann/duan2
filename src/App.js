@@ -9,6 +9,7 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
+
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -53,6 +54,7 @@ import Dangcho from "./duan/QLDonHang/Dangcho";
 import DaHuy from "./duan/QLDonHang/DaHuy";
 import All from "./duan/QLDonHang/All";
 
+
 import UpdateCategory from "./duan/QLDanhMuc/UpdateCategory";
 import DanhMuc from "./duan/QLDanhMuc/DanhMuc";
 import AddCategory from "./duan/QLDanhMuc/AddCategory";
@@ -63,25 +65,16 @@ import Login from "./duan/a/Login";
 import Quenmk from "./duan/a/Quenmk";
 
 
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 
-
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-
+import XemChiTiet from "./duan/QLDonHang/XemChiTiet";
 function App() {
-
 
   return (
 <div>
-  
+  <XemChiTiet/>
 </div>
-
-
   );
 }
 export default App;
