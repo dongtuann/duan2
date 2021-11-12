@@ -1,4 +1,11 @@
 import React from "react";
+// import './App.css';
+// import Navbar from './components/Navbar';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Home from './pages/home';
+// import Product from './pages/product';
+// import Contact from './pages/contact';
+// import News from './pages/news';
 import Avatar from '@mui/material/Avatar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { styled, useTheme } from '@mui/material/styles';
@@ -40,6 +47,8 @@ import TextField from '@mui/material/TextField';
 
 import ThongKe from "./duan/ThongKe/ThongKe";
 
+import TrangchuAdmin from "./duan/TrangchuAdmin/Homeadmin";
+
 import UpdateSP from "./duan/QLSanPham/UpdateSP";
 import Addsp from "./duan/QLSanPham/Addsp";
 import SanPham from "./duan/QLSanPham/SanPham";
@@ -69,11 +78,13 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 
 import XemChiTiet from "./duan/QLDonHang/XemChiTiet";
+import Homeadmin from "./duan/TrangchuAdmin/Homeadmin";
 function App() {
 
   return (
 <div>
-  <XemChiTiet/>
+
+  <Homeadmin/>
 </div>
   );
 }
