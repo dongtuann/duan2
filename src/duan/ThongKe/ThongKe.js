@@ -110,215 +110,119 @@ function ThongKe() {
     setOpen(false);
   };
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: '36px',
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Home
-          </Typography>
+    <div style={{marginLeft:"250px"}}>
+    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+    <DrawerHeader />
+    <main class="container"   >     
+      <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
+      </div>
+      <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
 
-          <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "1000px" }} /><Button variant="contained"
-            class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
+        <div class="offset-1 mt-5  " >
+          <form >
+        
+            <div class="card">
 
-          ></Button>
-          <p style={{marginTop:"30px", marginLeft:"10px"}}>ABC</p>
-        </Toolbar>
-      </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton >
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản  Lý Sản Phẩm " />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AccountBoxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Tài Khoản" />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Đơn Hàng" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Danh Mục" />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Ưu Đãi" />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <BarChartIcon />
-              </ListItemIcon>
-              <ListItemText primary="Thống Kê" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AccountBoxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Đăng Xuát" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        <main class="container"   >     
-          <div style={{ marginLeft: "-10px", marginTop: "-50px", height: "20px" }}>
-          </div>
-          <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
-
-            <div class="offset-1 mt-5  " >
-              <form >
-            
-                <div class="card">
-
-                  <div class="card-header" >
-                    
-                    <h2 style={{color:"red"}}>Danh Sách Thống Kê </h2>
-                  </div>
-                  <div class="card-body">
-
-                    <div class="row">                      
-                      <div class="col">
-                      <div class="form-group  "style={{marginTop:"20px"}}>
-                      <div style={{marginLeft:"767px"}}>
-                      <input type="date" class="form-control" style={{width:"180px"}} id="ngaybatdau" name="ngaybatdau" autocomplete="off"/>
-                 
-             
-                 <p style={{marginLeft:"200px", marginTop:"-32px"}}>đến</p>
+              <div class="card-header" >
                 
-                     <input type="date" class="form-control"  style={{width:"180px", marginLeft:"250px", marginTop:"-46px"}}id="ngayketthuc" name="ngayketthuc" autocomplete="off"/>  
-           </div>
+                <h2 style={{color:"red"}}>Danh Sách Thống Kê </h2>
               </div>
-                       <Button variant="contained"
-                          class="btn btn-outline-warning" style={{ marginTop: "10px" , marginTop:"-66px", marginLeft:"1200px"}} startIcon={<SearchIcon />}
+              <div class="card-body">
 
-                        ></Button>
-                        <TableContainer component={Paper} style={{ marginTop: "10px" }}>
-                          <Table sx={{ minWidth: 250 }} aria-label="simple table">
-                            <TableHead>
-                              <TableRow>
-                                <TableCell align="right">ID</TableCell>
-                                <TableCell align="right">Họ Tên</TableCell>
-                                <TableCell align="right">Địa chỉ&nbsp;</TableCell>
-                                <TableCell align="right">Tổng(vnd)</TableCell>
-                                <TableCell align="right">Ngày&nbsp;</TableCell>
-                           
-                              </TableRow>
-                            </TableHead>
-                            <TableBody>
-                            <TableRow
-                              >
-                                <TableCell align="right">5</TableCell>
-                                <TableCell align="right">tuandv</TableCell>
-                                <TableCell align="right">Tan Hoi</TableCell>
-                                <TableCell align="right">1.000</TableCell>
-                                <TableCell align="right">19/9/2021</TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
+                <div class="row">                      
+                  <div class="col">
+                  <div class="form-group  "style={{marginTop:"20px"}}>
+                  <div style={{marginLeft:"500px"}}>
+                  <input type="date" class="form-control" style={{width:"180px"}} id="ngaybatdau" name="ngaybatdau" autocomplete="off"/>
+             
+         
+             <p style={{marginLeft:"200px", marginTop:"-32px"}}>đến</p>
+            
+                 <input type="date" class="form-control"  style={{width:"180px", marginLeft:"250px", marginTop:"-46px"}}id="ngayketthuc" name="ngayketthuc" autocomplete="off"/>  
+       </div>
+          </div>
+                   <Button variant="contained"
+                      class="btn btn-outline-warning" style={{ marginTop: "10px" , marginTop:"-66px", marginLeft:"950px"}} startIcon={<SearchIcon />}
 
-                              >
-                                <TableCell align="right">44</TableCell>
-                                <TableCell align="right">bbbbDAF</TableCell>
-
-                                <TableCell align="right">dAN</TableCell>
-                                <TableCell align="right">400.000</TableCell>
-                                <TableCell align="right">7/10/2021</TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-                              >
-                                <TableCell align="right">77</TableCell>
-                                <TableCell align="right">tuandv</TableCell>
-                                <TableCell align="right">Tan Hoi</TableCell>
-                                <TableCell align="right">1.000</TableCell>
-                                <TableCell align="right">19/9/2021</TableCell>
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                
-                                </TableCell>
-                              </TableRow>
+                    ></Button>
+                    <TableContainer component={Paper} style={{ marginTop: "10px" }}>
+                      <Table sx={{ minWidth: 250 }} aria-label="simple table">
+                        <TableHead>
+                          <TableRow>
+                            <TableCell align="right">ID</TableCell>
+                            <TableCell align="right">Họ Tên</TableCell>
+                            <TableCell align="right">Địa chỉ&nbsp;</TableCell>
+                            <TableCell align="right">Tổng(vnd)</TableCell>
+                            <TableCell align="right">Ngày&nbsp;</TableCell>
+                       
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                        <TableRow
+                          >
+                            <TableCell align="right">5</TableCell>
+                            <TableCell align="right">tuandv</TableCell>
+                            <TableCell align="right">Tan Hoi</TableCell>
+                            <TableCell align="right">1.000</TableCell>
+                            <TableCell align="right">19/9/2021</TableCell>
+                            <TableCell style={{ marginLeft: "70%" }}>
                             
-                            </TableBody>
-                          </Table>
-                        </TableContainer>
-                      </div>
-                    </div>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow
+
+                          >
+                            <TableCell align="right">44</TableCell>
+                            <TableCell align="right">bbbbDAF</TableCell>
+
+                            <TableCell align="right">dAN</TableCell>
+                            <TableCell align="right">400.000</TableCell>
+                            <TableCell align="right">7/10/2021</TableCell>
+                            <TableCell style={{ marginLeft: "70%" }}>
+                            
+                            </TableCell>
+                          </TableRow>
+                          <TableRow
+                          >
+                            <TableCell align="right">77</TableCell>
+                            <TableCell align="right">tuandv</TableCell>
+                            <TableCell align="right">Tan Hoi</TableCell>
+                            <TableCell align="right">1.000</TableCell>
+                            <TableCell align="right">19/9/2021</TableCell>
+                            <TableCell style={{ marginLeft: "70%" }}>
+                            
+                            </TableCell>
+                          </TableRow>
+                        
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                   </div>
-
                 </div>
+              </div>
 
-
-                <div class="card-footer text-muted">
-                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
-                    <li class="page-item">
-                      <a class="page-link">Trang truoc</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link">Trang sau</a>
-                    </li>
-                  </ul>
-                </div>
-              </form>
             </div>
-          </section>
-        </main>
-      </Box>
-    </Box>
+
+
+            <div class="card-footer text-muted">
+              <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
+                <li class="page-item">
+                  <a class="page-link">Trang truoc</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link">Trang sau</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </Box>
+  </div>
   );
 }
 export default ThongKe;

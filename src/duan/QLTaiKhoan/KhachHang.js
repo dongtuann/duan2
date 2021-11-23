@@ -119,213 +119,116 @@ function KhachHang() {
     setOpen(false);
   };
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: '36px',
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Home
-          </Typography>
+    <div style={{marginLeft:"250px"}}>
+    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+    <DrawerHeader />
+    <main class="container"   >
 
-          <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "1000px" }} /><Button variant="contained"
-            class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
+      <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
 
-          ></Button>
-          <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
-          <img src="..." width="80px"/>
-        </Toolbar>
-      </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton >
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản  Lý Sản Phẩm " />
-            </ListItemButton>
-          </ListItem>
+        <div class="offset-1 mt-5  " >
+          <form >
+            <div class="card">
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AccountBoxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Tài Khoản" />
-            </ListItemButton>
-          </ListItem>
+              <div class="card-header" >
+                <b>Danh sách khách hàng</b>
+              </div>
+              <div class="card-body">
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Đơn Hàng" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Danh Mục" />
-            </ListItemButton>
-          </ListItem>
+                <div class="row">
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AssignmentIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quản Lý Ưu Đãi" />
-            </ListItemButton>
-          </ListItem>
+                  <div class="col">
+                    <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "850px" }} /><Button variant="contained"
+                      class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <BarChartIcon />
-              </ListItemIcon>
-              <ListItemText primary="Thống Kê" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AccountBoxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Đăng Xuát" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        <main class="container"   >
- 
-          <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
-
-            <div class="offset-1 mt-5  " >
-              <form >
-                <div class="card">
-
-                  <div class="card-header" >
-                    <b>Danh sách khách hàng</b>
-                  </div>
-                  <div class="card-body">
-
-                    <div class="row">
-
-                      <div class="col">
-                        <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "850px" }} /><Button variant="contained"
-                          class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
-
-                        ></Button>
-                        <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-                          <Table sx={{ minWidth: 250 }} aria-label="simple table">
-                            <TableHead>
-                              <TableRow>
-                                <TableCell>ID</TableCell>
-                                <TableCell align="right">Họ Tên</TableCell>
-                                
-                                <TableCell align="right">Email</TableCell>
-                                <TableCell align="right">Số điện thoại&nbsp;</TableCell>
-                                <TableCell align="right">Địa chỉ &nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
-
-                              </TableRow>
-                            </TableHead>
-                            <TableBody>
-
-                              <TableRow
-
-                              >
-                                <TableCell align="right">1</TableCell>
-                                <TableCell align="right">abccc</TableCell>
-
-                                <TableCell align="right">abc@gamil.com</TableCell>
-                                <TableCell align="right">01999888</TableCell>
-                                <TableCell align="right">Dan P</TableCell>
-
-
-
-
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger"
-                                    style={{ marginLeft: "50%" }} startIcon={<DeleteIcon />}
-                                  > Xóa
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">2</TableCell>
-                                <TableCell align="right">bbbbscv</TableCell>
-
-                                <TableCell align="right">e@gmail.com</TableCell>
-                                <TableCell align="right">124124124214</TableCell>
-                                <TableCell align="right">aaaaa</TableCell>
-
-
-
-
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                  <Button variant="outlined" class="btn btn-outline-danger"
-                                    style={{ marginLeft: "50%" }}
-                                  > Xóa
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
+                    ></Button>
+                    <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                      <Table sx={{ minWidth: 250 }} aria-label="simple table">
+                        <TableHead>
+                          <TableRow>
+                            <TableCell>ID</TableCell>
+                            <TableCell align="right">Họ Tên</TableCell>
                             
+                            <TableCell align="right">Email</TableCell>
+                            <TableCell align="right">Số điện thoại&nbsp;</TableCell>
+                            <TableCell align="right">Địa chỉ &nbsp;</TableCell>
+                            <TableCell align="right">Hành động&nbsp;</TableCell>
 
-                            </TableBody>
-                          </Table>
-                        </TableContainer>
-                      </div>
-                    </div>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+
+                          <TableRow
+
+                          >
+                            <TableCell align="right">1</TableCell>
+                            <TableCell align="right">abccc</TableCell>
+
+                            <TableCell align="right">abc@gamil.com</TableCell>
+                            <TableCell align="right">01999888</TableCell>
+                            <TableCell align="right">Dan P</TableCell>
+
+
+
+
+                            <TableCell style={{ marginLeft: "70%" }}>
+                              <Button variant="outlined" class="btn btn-outline-danger"
+                                style={{ marginLeft: "50%" }} startIcon={<DeleteIcon />}
+                              > Xóa
+                              </Button>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow
+
+                          >
+                            <TableCell align="right">2</TableCell>
+                            <TableCell align="right">bbbbscv</TableCell>
+
+                            <TableCell align="right">e@gmail.com</TableCell>
+                            <TableCell align="right">124124124214</TableCell>
+                            <TableCell align="right">aaaaa</TableCell>
+
+
+
+
+                            <TableCell style={{ marginLeft: "70%" }}>
+                              <Button variant="outlined" class="btn btn-outline-danger"
+                                style={{ marginLeft: "50%" }}
+                              > Xóa
+                              </Button>
+                            </TableCell>
+                          </TableRow>
+                        
+
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                   </div>
-
                 </div>
+              </div>
 
-
-                <div class="card-footer text-muted">
-                  <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
-                    <li class="page-item">
-                      <a class="page-link">Trang truoc</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link">Trang sau</a>
-                    </li>
-                  </ul>
-                </div>
-              </form>
             </div>
-          </section>
-        </main>
-      </Box>
-    </Box>
+
+
+            <div class="card-footer text-muted">
+              <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
+                <li class="page-item">
+                  <a class="page-link">Trang truoc</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link">Trang sau</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </Box>
+  </div>
   );
 }
 export default KhachHang;

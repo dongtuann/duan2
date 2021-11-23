@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from '@mui/material/Avatar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -18,28 +17,33 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import Button from '@mui/material/Button';
+import SearchIcon from '@mui/icons-material/Search';
+import TextField from '@mui/material/TextField';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+
 import TableCell from '@mui/material/TableCell';
-import CreateSharpIcon from '@mui/icons-material/CreateSharp';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import ControlPointIcon from '@mui/icons-material/ControlPoint';
-import SearchIcon from '@mui/icons-material/Search';
-import TextField from '@mui/material/TextField';
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import DaHuy from "./DaHuy";
-import Dangcho from "./Dangcho";
-import XacNhan from "./XacNhan";
-import XemChiTiet from "./XemChiTiet";
+
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import SanPham  from "../QLSanPham/SanPham";
+import DanhMuc from'../QLDanhMuc/DanhMuc'
+import {
+ 
+  Card,
+  Container,
+  Row,
+  Col,
+
+} from "react-bootstrap";
 import {
   BrowserRouter,
   Switch,
@@ -48,6 +52,7 @@ import {
 } from "react-router-dom";
 
 const drawerWidth = 240;
+
 const openedMixin = (theme) => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
@@ -112,8 +117,12 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
   }),
 );
-function All() {
+function handleClick(event) {
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
+}
 
+function Home() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -124,46 +133,103 @@ function All() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  return (    
-  <BrowserRouter> 
-    <div style={{marginLeft:"250px"}}>
+  return (
+      <div style={{marginLeft:"220px"}}>
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
     <DrawerHeader />
     <main class="container"   >
-    <div class=" mt-4 offset-1 mb -4" style={{ marginLeft: "-20px" }}>   <Button variant="contained" class="btn btn-outline-primary"
+  
+   <div role="presentation" onClick={handleClick}>
+   
+<Breadcrumbs aria-label="breadcrumb">
+  <Link underline="hover" color="inherit" href="/">
+    Dashboard
+  </Link>
+  <Link
+    underline="hover"
+    color="inherit"
+    href="/getting-started/installation/"
+  >
+  Overview
+  </Link>
 
-> <Link to ="/All">Tất cả đơn hàng</Link></Button>
-</div>
-<div style={{ marginLeft: "125px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-secondary"
-
-> <Link to ="/Dangcho">Đơn đang chờ</Link></Button></div>
-<div style={{ marginLeft: "260px", marginTop: "-38px" }}>   <Button variant="contained" class="btn btn-outline-warning"
-
-> <Link to ="/XacNhan">Đơn đã xác nhận</Link></Button></div>
-<div style={{ marginLeft: "410px", marginTop:"-38px" }}>   <Button variant="contained" class="btn btn-outline-danger"
-
-> <Link to ="/DaHuy">Đơn hàng đã hủy</Link></Button></div>
+</Breadcrumbs>
 
 
-      <section class="row " style={{ marginLeft: "-140px", width: "100%" }}>
+    <Row style={{color : "red"}}>
+      <Col lg="3" sm="6">
+        <Card className="card-stats" >
+          <Card.Body style={{color : "red", background:"yellow"}}>
+            <Row className="fas fa-redo mr-1">
+             4 Sản Phẩm 
+             
+            </Row>
+          </Card.Body>
+          <Card.Footer>
+            
+            <div className="stats">
+              <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
+            
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+      <Col lg="3" sm="6">
+        <Card className="card-stats" >
+          <Card.Body style={{color : "red", background:"green "}}>
+            <Row className="fas fa-redo mr-1">
+            2 Danh Mục 
+             
+            </Row>
+          </Card.Body>
+          <Card.Footer>
+            
+            <div className="stats">
+              <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
+            
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+      <Col lg="3" sm="6">
+        <Card className="card-stats" >
+          <Card.Body style={{color : "white", background:"red"}}>
+            <Row className="fas fa-redo mr-1">
+            0 Đơn hàng mới 
+             
+            </Row>
+          </Card.Body>
+          <Card.Footer>
+            
+            <div className="stats">
+              <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
+            
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+      <Col lg="3" sm="6">
+        <Card className="card-stats" >
+          <Card.Body style={{color : "white", background:"blue"}}>
+            <Row className="fas fa-redo mr-1">
+            0 Ưu Đãi
+             
+            </Row>
+          </Card.Body>
+          <Card.Footer>
+            
+            <div className="stats">
+              <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
+            
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+    
+    </Row>
 
-        <div class="offset-1 mt-5  " >
-          <form >
-            <div class="card">
-
-              <div class="card-header" >
-                <b>Tât cả đơn hàng</b>
-              </div>
-              <div class="card-body">
-
-                <div class="row">
-
-                  <div class="col">
-                    <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "850px" }} /><Button variant="contained"
-                      class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
-
-                    ></Button>
-                    <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+      <div>  <p  style={{ marginTop: "60px" }}>Gần đây </p></div>
+      <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                       <Table sx={{ minWidth: 250 }} aria-label="simple table">
                         <TableHead>
                           <TableRow>
@@ -182,7 +248,7 @@ function All() {
 
                           >
                             <TableCell align="right">1</TableCell>
-                            <TableCell align="right">xxxxxxxxasascv</TableCell>
+                            <TableCell align="right">Anh</TableCell>
 
                             <TableCell align="right">17/10/2021</TableCell>
                             <TableCell align="right">Đã hủy</TableCell>
@@ -195,15 +261,15 @@ function All() {
                             <TableCell style={{ marginLeft: "70%" }}>
                             <Button variant="outlined" class="btn btn-outline-warning"
                                 style={{ marginLeft: "35%" }} startIcon={<RemoveRedEyeIcon  />}
-                              > <Link to ="/XemChiTiet"> Xem chi tiết</Link>
+                              > Xem chi tiết
                               </Button>
                             </TableCell>
                           </TableRow>
                           <TableRow
 
                           >
-                            <TableCell align="right">1</TableCell>
-                            <TableCell align="right">xxxxxxxxasascv</TableCell>
+                            <TableCell align="right">2</TableCell>
+                            <TableCell align="right">Chua</TableCell>
 
                             <TableCell align="right">17/10/2021</TableCell>
                             <TableCell align="right">Đã hủy</TableCell>
@@ -223,8 +289,8 @@ function All() {
                           <TableRow
 
                           >
-                            <TableCell align="right">1</TableCell>
-                            <TableCell align="right">xxxxxxxxasascv</TableCell>
+                            <TableCell align="right">3</TableCell>
+                            <TableCell align="right">B</TableCell>
 
                             <TableCell align="right">17/10/2021</TableCell>
                             <TableCell align="right">Chưa thanh toán</TableCell>
@@ -244,8 +310,8 @@ function All() {
                           <TableRow
 
                           >
-                            <TableCell align="right">1</TableCell>
-                            <TableCell align="right">bfsbbv</TableCell>
+                            <TableCell align="right">4</TableCell>
+                            <TableCell align="right">DD</TableCell>
 
                             <TableCell align="right">17/10/2021</TableCell>
                             <TableCell align="right">Đã hủy</TableCell>
@@ -265,41 +331,12 @@ function All() {
                         </TableBody>
                       </Table>
                     </TableContainer>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-
-            <div class="card-footer text-muted">
-              <ul className="pagination" style={{ position: 'absolute', marginLeft: "60%", marginTop: '3%' }}>
-                <li class="page-item">
-                  <a class="page-link">Trang truoc</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link">2</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link">Trang sau</a>
-                </li>
-              </ul>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
+</div>
+        </main>
   </Box>
   </div>
-  <Switch>
-  <Route path="/All"><All/></Route>
-              <Route path="/DaHuy"><DaHuy/></Route>
-              <Route path="/DangCho"><Dangcho/></Route>
-              <Route path="/XacNhan"><XacNhan/></Route>
-              <Route path="/XemChiTiet"><XemChiTiet/></Route>
-             
-          </Switch>
-  </BrowserRouter>
+
+
   );
 }
-export default All;
+export default Home;

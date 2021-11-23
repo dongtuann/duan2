@@ -116,104 +116,7 @@ function UuDai() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-    <CssBaseline />
-    <AppBar position="fixed" open={open}>
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          onClick={handleDrawerOpen}
-          edge="start"
-          sx={{
-            marginRight: '36px',
-            ...(open && { display: 'none' }),
-          }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h2" noWrap component="div">
-     Home
-        </Typography>
-        
-        <TextField id="standard-basic" label="Tìm kiếm" variant="standard" style={{ marginLeft: "1000px" }} /><Button variant="contained"
-                              class="btn btn-outline-warning" style={{ marginTop: "10px" }} startIcon={<SearchIcon />}
-
-                          ></Button>
-                            <p style={{marginTop:"30px", marginLeft:"10px"}}>vipp2001</p>
-        <img src="#" width="80px"/>
-      </Toolbar>
-    </AppBar>
-    <Drawer variant="permanent" open={open}>
-      <DrawerHeader>
-        <IconButton onClick={handleDrawerClose}>
-          {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-        </IconButton>
-      </DrawerHeader>
-      <Divider />
-      <List>
-                              <ListItem disablePadding>
-                                  <ListItemButton >
-                                      <ListItemIcon>
-                                      <AssignmentIcon />
-                                      </ListItemIcon>
-                                     <ListItemText  primary="Quản  Lý Sản Phẩm " />
-                                  </ListItemButton>
-                              </ListItem>
-
-                              <ListItem disablePadding>
-                                  <ListItemButton>
-                                      <ListItemIcon>
-                                          <AccountBoxIcon />
-                                      </ListItemIcon>
-                                      <ListItemText primary="Quản Lý Tài Khoản" />
-                                  </ListItemButton>
-                              </ListItem>
-
-                              <ListItem disablePadding>
-                                  <ListItemButton>
-                                      <ListItemIcon>
-                                          <AssignmentIcon />
-                                      </ListItemIcon>
-                                      <ListItemText primary="Quản Lý Đơn Hàng" />
-                                  </ListItemButton>
-                              </ListItem>
-                              <ListItem disablePadding>
-                                  <ListItemButton>
-                                      <ListItemIcon>
-                                          <AssignmentIcon />
-                                      </ListItemIcon>
-                                      <ListItemText primary="Quản Lý Danh Mục" />
-                                  </ListItemButton>
-                              </ListItem>
-
-                              <ListItem disablePadding>
-                                  <ListItemButton>
-                                      <ListItemIcon>
-                                          <AssignmentIcon />
-                                      </ListItemIcon>
-                                      <ListItemText primary="Quản Lý Ưu Đãi" />
-                                  </ListItemButton>
-                              </ListItem>
-
-                              <ListItem disablePadding>
-                                  <ListItemButton>
-                                      <ListItemIcon>
-                                          <BarChartIcon />
-                                      </ListItemIcon>
-                                      <ListItemText primary="Thống Kê" />
-                                  </ListItemButton>
-                              </ListItem>
-                              <ListItem disablePadding>
-                                  <ListItemButton>
-                                      <ListItemIcon>
-                                      <AccountBoxIcon />
-                                      </ListItemIcon>
-                                      <ListItemText primary="Đăng Xuát" />
-                                  </ListItemButton>
-                              </ListItem>
-                          </List>
-    </Drawer>
+    <div style={{marginLeft:"250px"}}>
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <DrawerHeader />
       <main class="container"   >
@@ -305,7 +208,7 @@ function UuDai() {
               </section>
           </main>
     </Box>
-  </Box>
+    </div>
   );
 }
 export default UuDai;

@@ -1,11 +1,5 @@
 import React from "react";
-// import './App.css';
-// import Navbar from './components/Navbar';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Home from './pages/home';
-// import Product from './pages/product';
-// import Contact from './pages/contact';
-// import News from './pages/news';
+
 import Avatar from '@mui/material/Avatar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { styled, useTheme } from '@mui/material/styles';
@@ -79,12 +73,13 @@ import Link from '@mui/material/Link';
 
 import XemChiTiet from "./duan/QLDonHang/XemChiTiet";
 import Homeadmin from "./duan/TrangchuAdmin/Homeadmin";
+
 function App() {
 
   return (
 <div>
 
-  <Homeadmin/>
+<All/>
 </div>
   );
 }

@@ -34,8 +34,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-
+import SanPham  from "../QLSanPham/SanPham";
+import DanhMuc from'../QLDanhMuc/DanhMuc'
+import Home from '../TrangchuAdmin/Home'
+import Login from "../a/Login";
+import All from "../QLDonHang/All";
 import {
  
   Card,
@@ -44,7 +47,15 @@ import {
   Col,
 
 } from "react-bootstrap";
-
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import KhachHang from "../QLTaiKhoan/KhachHang";
+import UuDai from "../QLUuDai/UuDai";
+import ThongKe from "../ThongKe/ThongKe";
 
 const drawerWidth = 240;
 
@@ -129,6 +140,8 @@ function Homeadmin() {
     setOpen(false);
   };
   return (
+    <BrowserRouter> 
+   
     <Container fluid>
 
    
@@ -168,12 +181,21 @@ function Homeadmin() {
         </DrawerHeader>
         <Divider />
         <List>
+          
+        <ListItem disablePadding>
+                                    <ListItemButton >
+                                        <ListItemIcon>
+                                        <AssignmentIcon />
+                                        </ListItemIcon>
+                                        <Link to ="/trangChu"> <ListItemText  primary="Trang chủ chính" /></Link>
+                                    </ListItemButton>
+                                </ListItem>
                                 <ListItem disablePadding>
                                     <ListItemButton >
                                         <ListItemIcon>
                                         <AssignmentIcon />
                                         </ListItemIcon>
-                                       <ListItemText  primary="Quản  Lý Sản Phẩm " />
+                                        <Link to ="/sanPham"> <ListItemText  primary="Quản  Lý Sản Phẩm " /></Link>
                                     </ListItemButton>
                                 </ListItem>
 
@@ -182,7 +204,7 @@ function Homeadmin() {
                                         <ListItemIcon>
                                             <AccountBoxIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Quản Lý Tài Khoản" />
+                                        <Link to ="/taiKhoan">    <ListItemText primary="Quản Lý Tài Khoản" /></Link>
                                     </ListItemButton>
                                 </ListItem>
 
@@ -191,7 +213,7 @@ function Homeadmin() {
                                         <ListItemIcon>
                                             <AssignmentIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Quản Lý Đơn Hàng" />
+                                        <Link to ="/All">  <ListItemText primary="Quản Lý Đơn Hàng" /></Link>
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
@@ -199,7 +221,7 @@ function Homeadmin() {
                                         <ListItemIcon>
                                             <AssignmentIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Quản Lý Danh Mục" />
+                                        <Link to ="/danhMuc">   <ListItemText primary="Quản Lý Danh Mục" /></Link>
                                     </ListItemButton>
                                 </ListItem>
 
@@ -208,7 +230,7 @@ function Homeadmin() {
                                         <ListItemIcon>
                                             <AssignmentIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Quản Lý Ưu Đãi" />
+                                        <Link to ="/uuDai"> <ListItemText primary="Quản Lý Ưu Đãi" /></Link>
                                     </ListItemButton>
                                 </ListItem>
 
@@ -217,7 +239,7 @@ function Homeadmin() {
                                         <ListItemIcon>
                                             <BarChartIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Thống Kê" />
+                                        <Link to ="/thongKe">  <ListItemText primary="Thống Kê" /></Link>
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
@@ -225,216 +247,27 @@ function Homeadmin() {
                                         <ListItemIcon>
                                         <AccountBoxIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Đăng Xuát" />
+                                        <Link to ="/dangXuat"> <ListItemText primary="Đăng Xuát" /></Link>
                                     </ListItemButton>
                                 </ListItem>
                             </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        <main class="container"   >
-      
-       <div role="presentation" onClick={handleClick}>
-       
-    <Breadcrumbs aria-label="breadcrumb">
-      <Link underline="hover" color="inherit" href="/">
-        Dashboard
-      </Link>
-      <Link
-        underline="hover"
-        color="inherit"
-        href="/getting-started/installation/"
-      >
-      Overview
-      </Link>
-  
-    </Breadcrumbs>
-  
-  
-        <Row style={{color : "red"}}>
-          <Col lg="3" sm="6">
-            <Card className="card-stats" >
-              <Card.Body style={{color : "red", background:"yellow"}}>
-                <Row className="fas fa-redo mr-1">
-                 4 Sản Phẩm 
-                 
-                </Row>
-              </Card.Body>
-              <Card.Footer>
-                
-                <div className="stats">
-                  <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
-                
-                </div>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col lg="3" sm="6">
-            <Card className="card-stats" >
-              <Card.Body style={{color : "red", background:"green "}}>
-                <Row className="fas fa-redo mr-1">
-                2 Danh Mục 
-                 
-                </Row>
-              </Card.Body>
-              <Card.Footer>
-                
-                <div className="stats">
-                  <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
-                
-                </div>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col lg="3" sm="6">
-            <Card className="card-stats" >
-              <Card.Body style={{color : "white", background:"red"}}>
-                <Row className="fas fa-redo mr-1">
-                0 Đơn hàng mới 
-                 
-                </Row>
-              </Card.Body>
-              <Card.Footer>
-                
-                <div className="stats">
-                  <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
-                
-                </div>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col lg="3" sm="6">
-            <Card className="card-stats" >
-              <Card.Body style={{color : "white", background:"blue"}}>
-                <Row className="fas fa-redo mr-1">
-                0 Ưu Đãi
-                 
-                </Row>
-              </Card.Body>
-              <Card.Footer>
-                
-                <div className="stats">
-                  <Button className="fas fa-redo mr-1"> Xem chi tiết </Button>
-                
-                </div>
-              </Card.Footer>
-            </Card>
-          </Col>
-        
-        </Row>
-
-          <div>  <p  style={{ marginTop: "60px" }}>Gần đây </p></div>
-          <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-                          <Table sx={{ minWidth: 250 }} aria-label="simple table">
-                            <TableHead>
-                              <TableRow>
-                                <TableCell>ID</TableCell>
-                                <TableCell align="right">Khách Hàng</TableCell>
-                                <TableCell align="right">Ngày Đặt&nbsp;</TableCell>
-                                <TableCell align="right">Trạng Thái</TableCell>
-                                <TableCell align="right">Tổng(vnd)&nbsp;</TableCell>
-                                <TableCell align="right">Hành động&nbsp;</TableCell>
-
-                              </TableRow>
-                            </TableHead>
-                            <TableBody>
-
-                              <TableRow
-
-                              >
-                                <TableCell align="right">1</TableCell>
-                                <TableCell align="right">Anh</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Đã hủy</TableCell>
-                                <TableCell align="right">400.000</TableCell>
-
-
-
-
-                             
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }} startIcon={<RemoveRedEyeIcon  />}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">2</TableCell>
-                                <TableCell align="right">Chua</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Đã hủy</TableCell>
-                                <TableCell align="right">400.000</TableCell>
-
-
-
-
-                              
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }} startIcon={<RemoveRedEyeIcon  />}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">3</TableCell>
-                                <TableCell align="right">B</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Chưa thanh toán</TableCell>
-                                <TableCell align="right">200.000</TableCell>
-
-
-
-
-                             
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }} startIcon={<RemoveRedEyeIcon  />}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-                              <TableRow
-
-                              >
-                                <TableCell align="right">4</TableCell>
-                                <TableCell align="right">DD</TableCell>
-
-                                <TableCell align="right">17/10/2021</TableCell>
-                                <TableCell align="right">Đã hủy</TableCell>
-                                <TableCell align="right">7.000</TableCell>
-
-
-
-
-                                <TableCell style={{ marginLeft: "70%" }}>
-                                <Button variant="outlined" class="btn btn-outline-warning"
-                                    style={{ marginLeft: "35%" }} startIcon={<RemoveRedEyeIcon  />}
-                                  > Xem chi tiết
-                                  </Button>
-                                </TableCell>
-                              </TableRow>
-
-                            </TableBody>
-                          </Table>
-                        </TableContainer>
-  </div>
-            </main>
-      </Box>
+     
     </Box>
 
 
     </Container>
-    
-
+    <Switch>
+              <Route path="/sanPham"><SanPham/></Route>
+              <Route path="/danhMuc"><DanhMuc/></Route>
+              <Route path="/trangChu"><Home/></Route>
+              <Route path="/taiKhoan"><KhachHang/></Route>
+              <Route path="/All"><All/></Route>
+              <Route path="/uuDai"><UuDai/></Route>
+              <Route path="/thongKe"><ThongKe/></Route>
+              <Route path="/dangXuat"><Login/></Route>
+          </Switch>
+    </BrowserRouter> 
 
   );
 }
